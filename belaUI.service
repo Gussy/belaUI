@@ -7,6 +7,10 @@ User=root
 Group=root
 # install_service.sh automatically sets WorkingDirectory to point to the current directory
 WorkingDirectory=/opt/belaUI
+Environment=GST_PLUGIN_PATH=/home/rock/dev/gstcefsrc/build/Release:$GST_PLUGIN_PATH
+Environment=DISPLAY=:0.0
+Environment=MESA_GL_VERSION_OVERRIDE=3.3
+Environment=MESA_GLSL_VERSION_OVERRIDE=330
 ExecStart=/usr/bin/nodejs ./belaUI.js
 KillMode=mixed
 Restart=always
